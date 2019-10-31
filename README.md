@@ -2,7 +2,18 @@
 
 Dashboard for sensor data using Dash from plot.ly
 
+
+
+## Legacy Notes
+
+`data-trans` contains 2019 Spring Python Code for Raspberry Pi Data Relay (`repeater.py`) and Xbee Chaser Car Client (`serialReceiver.py`).
+
+`sim-arduino` contains test simulation code for plotly to ensure it will work.
+
+
+
 ## Installation & Requirements
+
 - Create a new virtual environment.
 - Run `pip install -r requirements.txt`.
 - All commands are run with Python3. Please config or change cmd according to your local environment.
