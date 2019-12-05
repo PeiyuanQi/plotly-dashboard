@@ -20,12 +20,12 @@ Dashboard for sensor data using Dash from plot.ly
 
 ## Usage
 - Check MySQL is running, proper database and tables are set.
-  - MAMP is recommended for fast setup on macOS, phpmyadmin is a good GUI tool to deal with MySQL, which packaged in MAMP as well.
+  - MAMP is recommended for fast setup on macOS, phpmyadmin is a good GUI tool to deal with MySQL, which packaged in MAMP as well, use the script `database/uscsolarcar.sql` to fast set up.
   - XAMPP is equivalent MAMP on windows.
   - Linux user should know what they are doing.
-- Check the configuration for serial port in `serialReceiver.py`.
+- Check the configuration for serial port in `serialReceiver.py`, each time USB plugged into computer, the serial port number will change.
 - Run `python3 dashboard.py` to start the dashboard webserver. The access url will shown in terminal.
-- Run `python3 serialReceiver.py` to receive and update sensor data.
+- Run `python3 serialReceiver.py` to receive and update sensor data. This script will be updated by Telemetry Team.
 
 ## Dev Instruction
 - Check [Workflow Wiki page](https://github.com/USCSolarCarStrategyTeam/plotly-dashboard/wiki/Workflow) if new to pull request.
@@ -43,6 +43,9 @@ Use MySQL database running on localhost to store and management the data.
 > Not using SQLite3 for concurrent access problem
 
 ##### Database Data Scheme
+
+**Important:** There is a init script to set up MySQL database locally. The scheme divergence should follow that script (`database/uscsolarcar.sql`).
+
 **Data from BMS Arduino**:
 
 **temporature**
