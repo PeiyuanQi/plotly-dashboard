@@ -20,7 +20,7 @@ Dashboard for sensor data using Dash from plot.ly
 
 ## Usage
 - Check MySQL is running, proper database and tables are set.
-  - MAMP is recommended for fast setup on macOS, phpmyadmin is a good GUI tool to deal with MySQL, which packaged in MAMP as well, use the script `database/uscsolarcar.sql` to fast set up.
+  - MAMP is recommended for fast setup on macOS, phpmyadmin is a good GUI tool to deal with MySQL, which packaged in MAMP as well, use the script `database/uscsolarcar.sql` to fast set up, but please finish reading this README first.
   - XAMPP is equivalent MAMP on windows.
   - Linux user should know what they are doing.
 - Check the configuration for serial port in `serialReceiver.py`, each time USB plugged into computer, the serial port number will change.
@@ -45,6 +45,7 @@ Use MySQL database running on localhost to store and management the data.
 ##### Database Data Scheme
 
 **Important:** There is a init script to set up MySQL database locally. The scheme divergence should follow that script (`database/uscsolarcar.sql`).
+**Important Again:** the sql script does not set up user information for the databse. To understand how to set up user and privilege for MySQL, please google it. The python scripts in this repo using databse requires proper user info modified in the codes.
 
 **Data from BMS Arduino**:
 
